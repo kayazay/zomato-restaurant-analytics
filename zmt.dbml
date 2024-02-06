@@ -1,0 +1,66 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table food {
+  f_id VARCHAR
+  item VARCHAR
+  veg_or_non_veg VARCHAR
+}
+
+Table restaurant {
+  id VARCHAR
+  cuisine VARCHAR
+  name VARCHAR
+  city VARCHAR
+  rating VARCHAR
+  rating_count VARCHAR
+  cost VARCHAR
+  lic_no VARCHAR
+  link VARCHAR
+}
+
+Table users {
+  user_id INTEGER
+  name VARCHAR
+  email VARCHAR
+  password VARCHAR
+  age INTEGER
+  gender VARCHAR
+  marital_status VARCHAR
+  occupation VARCHAR
+  monthly_income VARCHAR
+  educational_qualifications VARCHAR
+  family_size INTEGER
+}
+
+Table menu {
+  menu_id VARCHAR
+  r_id VARCHAR
+  cuisine VARCHAR
+  f_id VARCHAR
+  price VARCHAR
+}
+
+Table orders {
+  user_id INTEGER
+  r_id INTEGER
+  order_date DATE
+  sales_qty INTEGER
+  sales_amount INTEGER
+  currency VARCHAR
+  
+}
+
+
+
+Ref: food.f_id < menu.f_id
+
+Ref: restaurant.id < menu.r_id
+
+Ref: restaurant.cuisine <> menu.cuisine
+
+Ref: restaurant.id < orders.r_id
+
+Ref: orders.r_id <> menu.r_id
+
+Ref: users.user_id < orders.user_id
