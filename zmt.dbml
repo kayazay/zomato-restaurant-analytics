@@ -1,66 +1,62 @@
-// Use DBML to define your database structure
-// Docs: https://dbml.dbdiagram.io/docs
 
 Table food {
-  f_id VARCHAR
-  item VARCHAR
-  veg_or_non_veg VARCHAR
+  id NUMBER PK
+	item VARCHAR
+	veg BOOLEAN
 }
 
 Table restaurant {
-  id VARCHAR
-  cuisine VARCHAR
+  id NUMBER PK
   name VARCHAR
   city VARCHAR
-  rating VARCHAR
-  rating_count VARCHAR
+  rating NUMBER
+  rating_cnt NUMBER
   cost VARCHAR
-  lic_no VARCHAR
+  cuisine VARCHAR
+  lic_no NUMBER
   link VARCHAR
 }
 
 Table users {
-  user_id INTEGER
+  id INTEGER PK
   name VARCHAR
   email VARCHAR
   password VARCHAR
-  age INTEGER
+  age NUMBER
   gender VARCHAR
-  marital_status VARCHAR
+  marital_status BOOLEAN
   occupation VARCHAR
-  monthly_income VARCHAR
+  monthly_income NUMBER
   educational_qualifications VARCHAR
-  family_size INTEGER
+  family_size NUMBER
 }
 
 Table menu {
-  menu_id VARCHAR
-  r_id VARCHAR
+  id NUMBER PK
+  rid NUMBER
+  fid NUMBER
   cuisine VARCHAR
-  f_id VARCHAR
-  price VARCHAR
+  price FLOAT
 }
 
 Table orders {
-  user_id INTEGER
-  r_id INTEGER
   order_date DATE
-  sales_qty INTEGER
-  sales_amount INTEGER
+  uid NUMBER
+  rid NUMBER
+  sales_qty NUMBER
+  sales_amt NUMBER
   currency VARCHAR
-  
 }
 
 
+Ref: food.id < menu.fid
 
-Ref: food.f_id < menu.f_id
+Ref: restaurant.id < menu.rid
 
-Ref: restaurant.id < menu.r_id
+//Ref: restaurant.cuisine <> menu.cuisine
 
-Ref: restaurant.cuisine <> menu.cuisine
+Ref: restaurant.id < orders.rid
 
-Ref: restaurant.id < orders.r_id
+//Ref: orders.rid <> menu.rid
 
-Ref: orders.r_id <> menu.r_id
-
-Ref: users.user_id < orders.user_id
+Ref: users.id < orders.uid

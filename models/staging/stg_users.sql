@@ -5,18 +5,20 @@ select
     password,
     age,
     LOWER(gender) AS gender,
-    CASE 
-        WHEN marital_status='Single' THEN True
-        WHEN marital_status='Married' THEN False
+    CASE marital_status
+        WHEN 'Single' THEN False
+        WHEN 'Married' THEN True
     END as married,
     REPLACE(occupation,'Self Employeed','Self Employed') AS occupation,
-    to_number(CASE
-        WHEN monthly_income='Below Rs.10000' THEN 1
-        WHEN monthly_income='10001 to 25000' THEN 10001
-        WHEN monthly_income='25001 to 50000' THEN 25001
-        WHEN monthly_income='More than 50000' THEN 50001
-        WHEN monthly_income='No Income' THEN null
-    END) AS m_income,
+    to_number(
+        CASE monthly_income
+        -- convert monthly income to numeric value
+            WHEN 'Below Rs.10000' THEN 1
+            WHEN '10001 to 25000' THEN 10001
+            WHEN '25001 to 50000' THEN 25001
+            WHEN 'More than 50000' THEN 50001
+            WHEN 'No Income' THEN null END
+    ) AS m_income,
     educational_qualifications AS edu_q,
     family_size AS f_size
 from

@@ -4,6 +4,7 @@ select
     name,
     city,
     try_to_number(rating) AS rating,
+    -- convert column to numeric figure that could be inserted into histogram
     to_number(CASE
         WHEN left(rating_count,4)='10K+' THEN 10*1000+1
         WHEN left(rating_count,3)='5K+' THEN 5*1000+1
@@ -15,6 +16,7 @@ select
         WHEN left(rating_count,3)='Too' THEN 1
         ELSE null END
     ) AS rating_cnt,
+    -- start from 3rd character, excludes currency symbol and returns actual cost
     SUBSTR(cost, 3) AS cost,
     cuisine,
     try_to_number(lic_no) AS lic_no,
