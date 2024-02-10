@@ -1,12 +1,16 @@
-with newline_item_out_cte as (
+with numbered_fid as (
 select
-    try_to_number(REPLACE(f_id, 'fd', '')) as id,
+    -- removes fd and converts to number, or else null
+    try_to_number(trim(f_id, 'fd')) as id,
     item,
-    CASE
-        WHEN veg_or_non_veg = 'Veg' THEN True
-        WHEN veg_or_non_veg= 'Non-veg' THEN False
+    CASE veg_or_non_veg
+    -- reduces column to true or false based on whether food item is vegetarian or not
+        WHEN 'Veg' THEN True
+        WHEN 'Non-veg' THEN False
+        ELSE null
     END AS veg
 from
     raw.zomato.food
 )
-select * from newline_item_out_cte where id IS NOT NULL
+select * from numbered_fid 
+where id IS NOT NULL

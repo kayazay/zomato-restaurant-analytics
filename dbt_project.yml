@@ -39,3 +39,6 @@ models:
   zmt_project:
     staging:
       +materialized: table
+
+
+# https://github.com/Imagin-io/country-nationality-list/blob/master/countries.csv
