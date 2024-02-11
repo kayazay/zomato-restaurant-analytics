@@ -1,3 +1,4 @@
+with constrained_currency AS (
 select
     order_date,
     sales_qty,
@@ -9,4 +10,6 @@ select
     user_id AS uid,
     r_id AS rid
 from
-    raw.zomato.orders
+    {{ source('zomato','orders') }}
+)
+select * from constrained_currency where currency='INR'

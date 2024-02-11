@@ -10,7 +10,7 @@ select
         ELSE null
     END AS veg
 from
-    raw.zomato.food
+    {{ source('zomato','food') }}
 )
 select * from numbered_fid 
 where id IS NOT NULL

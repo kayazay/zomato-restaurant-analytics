@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: zomato
+    database: raw
+    #schema: zomato: name used as schema
+    tables:
+      - name: countries
+        description: '''The Countries table contains information about countries of the world and their demonyms as well as for continents. https://github.com/Imagin-io/country-nationality-list/blob/master/countries.csv
+          '''
+      - name: food
+        description: '''The Food table contains information about the different food items available on the app. This table stores the unique identifier of each food item, its name, and whether it is vegetarian or non-vegetarian.
+            '''
+      - name: menu
+        description: '''The Menu table contains information about the menus of different restaurants on the app. This table stores the unique identifier of the menu, the unique identifier of the restaurant associated with the menu, the unique identifier of the food item in the menu, the type of cuisine, and the price of the menu item.
+          '''
+      - name: orders
+        description: '''The Orders table **(Credential info sales amount and sales quantity are dummy generated) contains information about the orders placed by users on the app. This table stores the order date and time, the quantity of items ordered, the total sales amount, the currency used for the order, the unique identifier of the user who placed the order, and the unique identifier of the restaurant from which the order was placed.
+          '''
+      - name: restaurant
+        description: '''The Restaurant table contains information about the restaurants available on the app. This table stores the unique identifier of the restaurant, its name, location, average rating, number of ratings and reviews received, an estimate of the average cost per person for a meal, the type of cuisine offered, license number, link to its website, physical address, and a list of menu items offered by the restaurant.
+          '''
+      - name: users
+        description: '''The Users table (Credentials like user id, name, and password are dummy generated )contains information about the users registered on the app. This table stores the unique identifier of the user, their name, email address, encrypted password, age, gender, marital status, occupation, monthly income, highest educational qualifications, and the number of people in their family.
+          '''
+
