@@ -1,5 +1,5 @@
 /*
-FACTS TABLE
+DIMENSION TABLE
 HOLDS DATA SHOWING EACH USER WITH AN ACCOUNT ON THE APP
 AS WELL AS THEIR ORDER HISTORY OR SUMMARY
 AND MORE DETAILS ABOUT USER
@@ -17,7 +17,6 @@ SELECT
     SUM(sales_amt) AS total_purchase
 FROM
     {{ref('stg_orders')}}
-WHERE currency='INR'
 GROUP BY 1
 )
 -- joins the first cte to the users table extracting relevant details

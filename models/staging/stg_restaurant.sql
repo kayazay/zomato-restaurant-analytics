@@ -17,11 +17,11 @@ select
         ELSE null END
     ) AS rating_cnt,
     -- start from 3rd character, excludes currency symbol and returns actual cost
-    SUBSTR(cost, 3) AS cost,
+    try_to_number(SUBSTR(cost, 3)) AS cost,
     cuisine,
     try_to_number(lic_no) AS lic_no,
     link
 from
-    raw.zomato.restaurant
+    {{ source('zomato','restaurant') }}
 )
 select * from newline_id_out_cte where id IS NOT null

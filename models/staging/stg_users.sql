@@ -9,7 +9,11 @@ select
         WHEN 'Single' THEN False
         WHEN 'Married' THEN True
     END as married,
-    REPLACE(occupation,'Self Employeed','Self Employed') AS occupation,
+    CASE occupation
+        WHEN 'Self Employeed' THEN 'Self Employed'
+        WHEN 'House wife' THEN 'House Wife'
+        ELSE occupation
+    END AS occupation,
     to_number(
         CASE monthly_income
         -- convert monthly income to numeric value
@@ -19,7 +23,10 @@ select
             WHEN 'More than 50000' THEN 50001
             WHEN 'No Income' THEN null END
     ) AS m_income,
-    educational_qualifications AS edu_q,
+    CASE educational_qualifications
+        WHEN 'School' THEN 'High School'
+        ELSE educational_qualifications 
+    END AS edu_q,
     family_size AS f_size
 from
-    raw.zomato.users
+    {{ source('zomato','users') }}

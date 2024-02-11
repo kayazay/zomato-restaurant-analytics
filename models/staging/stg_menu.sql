@@ -14,5 +14,5 @@ select
         REGEXP_SUBSTR(price, '\\d+')
     ) AS price
 from
-    raw.zomato.menu
+    {{ source('zomato','menu') }}
 

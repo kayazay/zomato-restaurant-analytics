@@ -3,7 +3,7 @@ select
     nationality,
     en_short_name AS country    
 from
-    raw.zomato.countries
+    {{ source('zomato','countries') }}
 )
 select
     CASE 
@@ -16,3 +16,4 @@ select
     nationality
 from
     cte_country
+
