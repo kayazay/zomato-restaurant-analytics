@@ -13,7 +13,9 @@ select
         WHEN nationality LIKE '%African%' THEN 'Africa'
         ELSE country
     END AS country,
-    nationality
+    CASE 
+        WHEN nationality='Indian' THEN nationality||', North Indian'
+        ELSE nationality
+    END AS nationality
 from
     cte_country
-
