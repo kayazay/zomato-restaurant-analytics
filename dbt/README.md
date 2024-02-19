@@ -11,9 +11,10 @@ Data was extracted in csv format from
 [here](https://github.com/Imagin-io/country-nationality-list/blob/master/countries.csv); 
 and loaded into `Snowflake`.
 
+### `stg_countries`
+
 {% docs countries_docs %}
 
-### `stg_countries`
 The Countries table contains information about 
 + countries of the world, 
 + their demonyms.
@@ -34,9 +35,10 @@ related to India's popular food delivery app, `Zomato`.
 Five tables are extracted and loaded into `Snowflake`;
 and dataset can be found [here](https://www.kaggle.com/datasets/anas123siddiqui/zomato-database?select=orders.csv).
 
+### `stg_food`
+
 {% docs food_docs %}
 
-### `stg_food`
 The Food table contains information about the different food items available on the app such as: 
 + the unique identifier of each food item, 
 + its name, 
@@ -52,9 +54,12 @@ The Food table contains information about the different food items available on 
 
 {% enddocs %}
 
-{% docs menu_docs %}
+---
 
 ### `stg_menu`
+
+{% docs menu_docs %}
+
 The Menu table contains information about the menus of different restaurants on the app. This table stores 
 + the unique identifier of the menu, 
 + the unique identifier of the restaurant associated with the menu, 
@@ -72,9 +77,12 @@ The Menu table contains information about the menus of different restaurants on 
 
 {% enddocs %}
 
-{% docs orders_docs %}
+---
 
 ### `stg_orders`
+
+{% docs orders_docs %}
+
 The Orders table contains information about the orders placed by users on the app. This table stores the:
 + order date, 
 + quantity of items ordered & total sales amount, **(dummy generated and thus not used)**
@@ -92,9 +100,12 @@ The Orders table contains information about the orders placed by users on the ap
 
 {% enddocs %}
 
-{% docs restaurant_docs %}
+---
 
 ### `stg_retaurant`
+
+{% docs restaurant_docs %}
+
 The Restaurant table contains information about the restaurants available on the app. This table stores the:
 + unique identifier of the restaurant, 
 + its name, 
@@ -115,9 +126,12 @@ The Restaurant table contains information about the restaurants available on the
 
 {% enddocs %}
 
-{% docs users_docs %}
+---
 
 ### `stg_users`
+
+{% docs users_docs %}
+
 The Users table contains credentials about the users registered on the app. This table stores the:
 + unique identifier of the user, 
 + their name, email address, encrypted password, **(dummy generated and thus not used)**
@@ -131,7 +145,6 @@ The Users table contains credentials about the users registered on the app. This
 | 3  | Jermaine Roberson| uwalker@example.org                  | eO4GqGusF( | 22  | male   | false   | Student    | 1        | Post Graduate | 3      |
 | 4  | Rachel Carpenter | kimberlypatterson@example.net        | d^c7O6odaS | 22  | female | false   | Student    | NULL     | Graduate      | 6      |
 | 5  | Shawn Parker     | daniellebennett@example.com          | 8J#E5RMl1o | 22  | male   | false   | Student    | 1        | Post Graduate | 4      |
-
 
 {% enddocs %}
 
