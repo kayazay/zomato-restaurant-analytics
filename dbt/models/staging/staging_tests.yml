@@ -3,12 +3,14 @@ version: 2
 models:
   - name: stg_countries
   # staging countries table
+    description: "{{doc('countries_docs')}}"
     columns:
       - name: country
         tests:
           - not_null
   - name: stg_food
   # staging food table
+    description: "{{doc('food_docs')}}"
     columns:
       - name: id
         tests:
@@ -16,12 +18,14 @@ models:
           - not_null
   - name: stg_menu
   # staging menu table
+    description: "{{doc('menu_docs')}}"
     columns:
       - name: id
         tests:
           - not_null
   - name: stg_orders
   # staging orders table
+    description: "{{doc('orders_docs')}}"
     columns:
       - name: order_date
         tests:
@@ -33,6 +37,7 @@ models:
                 - "INR"
   - name: stg_restaurant
   # staging restaurants table
+    description: "{{doc('restaurant_docs')}}"
     columns:
       - name: id
         tests:
@@ -40,6 +45,7 @@ models:
           - not_null
   - name: stg_users
   # staging users table
+    description: "{{doc('users_docs')}}"
     columns:
       - name: id
         tests:

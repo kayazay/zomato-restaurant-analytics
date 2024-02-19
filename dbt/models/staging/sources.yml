@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: zomato
+    database: raw
+    #schema: zomato: name used as schema
+    tables:
+      - name: countries
+      - name: food
+      - name: menu
+      - name: orders
+      - name: restaurant
+      - name: users
+
