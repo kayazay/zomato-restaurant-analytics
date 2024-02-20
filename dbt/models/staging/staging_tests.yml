@@ -13,6 +13,7 @@ models:
     description: "{{doc('food_docs')}}"
     columns:
       - name: id
+        description: 'PK: must be unique and not null'
         tests:
           - unique
           - not_null
@@ -21,6 +22,7 @@ models:
     description: "{{doc('menu_docs')}}"
     columns:
       - name: id
+        description: 'PK: only non-null values accepted'
         tests:
           - not_null
   - name: stg_orders
@@ -28,9 +30,11 @@ models:
     description: "{{doc('orders_docs')}}"
     columns:
       - name: order_date
+        description: 'only non-null values accepted'
         tests:
           - not_null
       - name: currency
+        description: 'only accepted value is INR'
         tests:
           - accepted_values:
               values:
@@ -48,16 +52,19 @@ models:
     description: "{{doc('users_docs')}}"
     columns:
       - name: id
+        description: 'PK: must be unique and not null'
         tests:
           - unique
           - not_null
       - name: gender
+        description: "only accepted values are 'male' and 'female'"
         tests:
           - accepted_values:
               values:
                 - "male"
                 - "female"
       - name: occupation
+        description: 'only accepted values are "Self Employed", "House Wife", "Student", "Employee"'
         tests:
           - accepted_values:
               values:
@@ -66,6 +73,7 @@ models:
                 - "Student"
                 - "Employee"
       - name: edu_q
+        description: 'only accepted values are "Post Graduate", "Graduate", "Uneducated", "High School", "Ph.D"'
         tests:
           - accepted_values:
               values:

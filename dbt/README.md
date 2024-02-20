@@ -1,8 +1,8 @@
 # Staging Models
 
 The staging models were transformed on top of source tables and used for further downstream queries. 
-There are 6 staging models in the `staging/` folder, 5 of which are gotten from the a Kaggle datatset, 
-while the other is gotten from a GitHub repository.
+There are 6 staging models in the [staging folder](https://github.com/kayazay/zomato_analytics/tree/main/dbt/models/staging):
+5 of which are gotten from a Kaggle datatset, while the other is gotten from a GitHub repository.
 Dive into each of the source tables to know more about them here.
 
 ## country-nationality-list
