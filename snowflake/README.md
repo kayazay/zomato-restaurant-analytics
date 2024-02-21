@@ -4,7 +4,7 @@
 
 All tables were extracted and loaded into a `Snowflake` data warehouse then referenced by `dbt`. Documentation for all six tables with full description is found [here](https://github.com/kayazay/zomato_analytics/blob/main/dbt/README.md). The schema for these source tables can be found below:
 
-<img src = "https://dbdiagram.io/e/65c145a8ac844320ae806ca9/65d4bd27ac844320ae95ce1d" width=80% height=40%/>
+<img src = "https://dbdiagram.io/e/65c145a8ac844320ae806ca9/65d4bd27ac844320ae95ce1d" width=80% height=20%>
 
 ### DSL for Entity Relationship Diagram found here
 
