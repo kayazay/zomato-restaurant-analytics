@@ -1,9 +1,9 @@
-# Zomato Restaurant 🍜 Data Engineering ELT Project
+# Zomato Restaurant 🍜 Data Engineering Project
 
 <img src="https://github.com/kayazay/zomato_analytics/assets/60517587/7331a97e-e230-4e46-86e9-f84009fadcd9" width="100%" height="40%" alt="zmt_real">
 
 
-This is an end to end ELT data engineering project. This project uses the Zomato Restaurant dataset, an Indian multinational restaurant aggregator and food delivery company. Founded in 2008 by Deepinder Goyal and Pankaj Chadda, the Zomato app is an online food ordering and delivery platform that helps you place a food order from the restaurant registered on Zomato, and get it delivered on your doorsteps.
+This is an end to end ELT project that uses data from the Zomato Restaurant, an Indian multinational restaurant aggregator and food delivery company. Founded in 2008 by Deepinder Goyal and Pankaj Chadda, the Zomato app is an online food ordering and delivery platform that helps you place a food order from the restaurant registered on Zomato, and get it delivered on your doorsteps.
 
 ## Problem Description
 The purpose of this project is to make an end to end data pipeline which:
@@ -30,7 +30,7 @@ I used the Kimball Dimensional modeling principle to create facts and dimension 
 ![dag](https://github.com/kayazay/zomato_analytics/assets/60517587/6b1e6c3a-5e28-4acd-9e12-a08ffbfe5b4a)
 
 ## Tableau Report
-I created four dashboards on Tableau from facts and dimension tables built out of dbt, then incorporated them all into one report with appropriate controls like filters and legends. The four dashboards are:
+I created four dashboards on Tableau from facts and dimension tables built out of dbt, then incorporated them all into an [interactive report](https://public.tableau.com/shared/9332P3HXW?:display_count=n&:origin=viz_share_link) on my Tableau profile with appropriate controls like filters and legends. The four dashboards are:
 
 
 ### `food`
@@ -44,9 +44,3 @@ I created four dashboards on Tableau from facts and dimension tables built out o
 
 ### `restaurant`
 ![RST](https://github.com/kayazay/zomato_analytics/assets/60517587/aa8635ac-d39d-40e7-b4ae-ae7e4d424d5e)
-
-Here is the [interactive report](https://public.tableau.com/shared/9332P3HXW?:display_count=n&:origin=viz_share_link) on my Tableau profile.
-
-
-
-<div class='tableauPlaceholder' id='viz1708518394238' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;7C&#47;7CP9C97Q8&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;7CP9C97Q8' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;7C&#47;7CP9C97Q8&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1708518394238');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
