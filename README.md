@@ -1,7 +1,7 @@
-# Zomato Restaurant 🍜 ELT Project
-![zmt_real](https://github.com/kayazay/zomato_analytics/assets/60517587/7331a97e-e230-4e46-86e9-f84009fadcd9)
+# Zomato Restaurant 🍜 Data Engineering ELT Project
 
-![zmt_2](https://github.com/kayazay/zomato_analytics/assets/60517587/5e73ef08-4912-4790-bcaa-902f8f6f4578)
+<img src="https://github.com/kayazay/zomato_analytics/assets/60517587/7331a97e-e230-4e46-86e9-f84009fadcd9" width="100%" height="40%" alt="zmt_real">
+
 
 This is an end to end ELT data engineering project. This project uses the Zomato Restaurant dataset, an Indian multinational restaurant aggregator and food delivery company. Founded in 2008 by Deepinder Goyal and Pankaj Chadda, the Zomato app is an online food ordering and delivery platform that helps you place a food order from the restaurant registered on Zomato, and get it delivered on your doorsteps.
 
