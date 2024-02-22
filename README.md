@@ -22,13 +22,11 @@ The purpose of this project is to make an end to end data pipeline which:
 ![zomato_etl](https://github.com/kayazay/zomato_analytics/assets/60517587/f4fd8397-c476-46ab-a7b1-1cb7baab22c3)
 
 ## DAG for dbt 
-I used the Kimball Dimensional modeling principle to create facts and dimension tables from staging models in the dbt project. I used aggregations, CTEs, table joins, window functions and complex SQL logic to transform data into four marts that described a specific business function. The DAG for this workflow is:
-
-> **source tables &rarr; staging models &rarr; facts and dimension tables**
+This project leveraged the Kimball Dimensional Modeling principle to construct facts and dimension tables from initial staging models within the dbt framework. By utilizing a combination of advanced techniques including aggregations, Common Table Expressions, appropriate table joins, window functions and detailed SQL logic, the raw data went through extensive transformation and modeling. The **Directed Acyclic Graph (DAG)** below shows the dependencies and logical flow of transformations in this pipeline, from the source tables to the four distinct data marts, each built to address a specific component of the operations within the Zomato company.
 
 ![dag](https://github.com/kayazay/zomato_analytics/assets/60517587/6b1e6c3a-5e28-4acd-9e12-a08ffbfe5b4a)
 
-### ERD for Facts & Dimension tables
+### Data Marts Dictionary
 
 #### `dim_cuisine_country`
 
@@ -48,7 +46,7 @@ Fact table holding data for each order made on the Zomato app, and to which rest
 
 
 ## Tableau Report
-I created four dashboards on Tableau from data marts built out of dbt, then incorporated them into [**an interactive report on my Tableau profile**](https://public.tableau.com/shared/9332P3HXW?:display_count=n&:origin=viz_share_link) with appropriate controls, filters, and legends. The snapshots of the four dashboards are:
+The project culminated in the development of four dynamic dashboards within Tableau, each derived from the data marts built within dbt framework. These dashboards were seamlessly integrated into [**an interactive report**](https://public.tableau.com/shared/9332P3HXW?:display_count=n&:origin=viz_share_link) hosted on `Tableau Public`. Through the incorporation of controls, filters, legends, and narratives, users can easily explore and analyze the insights contained within the data.
 
 ### `cuisine`
 > ![CUISINE](https://github.com/kayazay/zomato_analytics/assets/60517587/f69e7e76-2321-47a2-894b-9b551636150c)
