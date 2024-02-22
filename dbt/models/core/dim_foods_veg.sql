@@ -1,10 +1,3 @@
--- DIMENSION TABLE
--- HOLDS DATA FOR POPULAR FOOD ITEMS USED IN THE ZOMATO APP
--- AS WELL AS THEIR FREQUENCY OF OCCURENCE
--- AND WHETHER THEY'RE vegetarian or not
--- REFERENCES food table
-
-
 WITH split_items AS (
 -- regex on the item column to get every word with the condition:
 -- first letter must be Capital and must be preceeded by 2 ore more words
