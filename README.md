@@ -2,7 +2,7 @@
 
 <img src="https://github.com/kayazay/zomato_analytics/assets/60517587/7331a97e-e230-4e46-86e9-f84009fadcd9" width="100%" height="40%" alt="zmt_real">
 
-This is an end to end ELT project that uses data from the Zomato Restaurant, an Indian multinational restaurant aggregator and food delivery company. Founded in 2008 by Deepinder Goyal and Pankaj Chadda, the Zomato app is an online food ordering and delivery platform that helps you place a food order from the restaurant registered on Zomato, and get it delivered on your doorsteps.
+This is an end to end **Extract, Load & Transform (ELT)** project that uses data from the Zomato Restaurant, an Indian multinational restaurant aggregator and food delivery company. Founded in 2008 by Deepinder Goyal and Pankaj Chadda, the Zomato app is an online food ordering and delivery platform that helps you place a food order from the restaurant registered on Zomato, and get it delivered on your doorsteps.
 
 ## Problem Description
 The purpose of this project is to make an end to end data pipeline which:
