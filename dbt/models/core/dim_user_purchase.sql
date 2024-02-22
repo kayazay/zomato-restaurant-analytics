@@ -1,12 +1,3 @@
-/*
-DIMENSION TABLE
-HOLDS DATA SHOWING EACH USER WITH AN ACCOUNT ON THE APP
-AS WELL AS THEIR ORDER HISTORY OR SUMMARY
-AND MORE DETAILS ABOUT USER
-REFERENCES users and orders table
-*/
-
-
 WITH users_orders_history AS (
 -- aggregates orders on the level of each user
 SELECT
