@@ -1,4 +1,4 @@
-# Zomato Restaurant 🍜 Data Engineering Project
+# Zomato Restaurant ETL
 
 <img src="https://github.com/kayazay/zomato_analytics/assets/60517587/7331a97e-e230-4e46-86e9-f84009fadcd9" width="100%" height="40%" alt="zmt_real">
 
